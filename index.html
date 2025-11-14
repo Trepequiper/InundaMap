@@ -78,7 +78,7 @@
             </div>
             <div class="hero__image">
                 <div class="hero__image-wrapper">
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 500'%3E%3Cdefs%3E%3ClinearGradient id='grad1' x1='0%25' y1='0%25' x2='0%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%230A4C8C;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%236ECDE7;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='400' height='500' fill='url(%23grad1)'/%3E%3Ccircle cx='200' cy='250' r='150' fill='%23fff' opacity='0.1'/%3E%3Cpath d='M200 100 L250 200 L150 200 Z' fill='%23F2C14E' opacity='0.8'/%3E%3Ccircle cx='200' cy='300' r='80' fill='%236FD9E1' opacity='0.6'/%3E%3Ctext x='200' y='260' font-family='Inter' font-size='24' fill='%23fff' text-anchor='middle'%3EAlerta%3C/text%3E%3Ctext x='200' y='290' font-family='Inter' font-size='18' fill='%23fff' text-anchor='middle'%3EActiva%3C/text%3E%3C/svg%3E" alt="Visualización de alertas de InundaMap" class="hero__img">
+                    <img src="Imagenes/EmergenciaActiva.png" alt="Visualización de alertas de InundaMap" class="hero__img">
                 </div>
             </div>
         </div>
@@ -315,10 +315,12 @@
                     <div id="map" class="map">
                         <!-- Google Maps will be injected here via JavaScript -->
                         <div class="map-placeholder">
-                            <svg class="map-placeholder__icon" width="80" height="80" viewBox="0 0 80 80" fill="currentColor">
-                                <path d="M40 10C26 10 15 21 15 35c0 21 25 45 25 45s25-24 25-45c0-14-11-25-25-25zm0 35c-5.5 0-10-4.5-10-10s4.5-10 10-10 10 4.5 10 10-4.5 10-10 10z"/>
-                            </svg>
-                            <p>Cargando mapa interactivo...</p>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15803.47890755893!2d-78.15175675547617!3d-8.012368076383193!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91adc3047cd43f2b%3A0xfa6db63d3eb7ae4f!2sEl%20Derrumbe%2C%2013140!5e0!3m2!1ses!2spe!4v1763112911276!5m2!1ses!2spe"
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>                        
                         </div>
                     </div>
 
@@ -459,7 +461,7 @@
                                     </svg>
                                     <div class="feature-text">
                                         <h4>Alertas Personalizadas</h4>
-                                        <p>Recibe notificaciones según tu ubicación y preferencias (US-01, US-07, US-17)</p>
+                                        <p>Recibe notificaciones según tu ubicación y preferencias</p>
                                     </div>
                                 </div>
 
@@ -469,20 +471,517 @@
                                     </svg>
                                     <div class="feature-text">
                                         <h4>Mapa de Riesgo Interactivo</h4>
-                                        <p>Visualiza zonas seguras y peligrosas en tiempo real (US-02, US-05)</p>
+                                        <p>Visualiza zonas seguras y peligrosas en tiempo real</p>
                                     </div>
                                 </div>
 
                                 <div class="feature-item">
-                                    <svg class="feature-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
-                                        <path d="M10 1L1 6v9h18V6L10 1zm0 2l7 4.2v7.8H3V7.2L10 3z"/>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="#0A4C8C">
+                                        <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/>
                                     </svg>
+
                                     <div class="feature-text">
                                         <h4>Refugios y Rutas Seguras</h4>
-                                        <p>Encuentra refugios cercanos con rutas optimizadas (US-04, US-14)</p>
+                                        <p>Encuentra refugios cercanos con rutas optimizadas</p>
                                     </div>
                                 </div>
 
                                 <div class="feature-item">
                                     <svg class="feature-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
                                         <circle cx="10" cy="10" r="8"/>
+                                        <path d="M9 6h2v4H9zm0 6h2v2H9z" fill="#fff"/>
+                                    </svg>
+                                    <div class="feature-text">
+                                        <h4>Reportes Comunitarios</h4>
+                                        <p>Comparte información con fotos y ubicación</p>
+                                    </div>
+                                </div>
+
+                                <div class="feature-item">
+                                    <svg class="feature-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                        <path d="M10 4c-3.3 0-6 2.7-6 6s2.7 6 6 6 6-2.7 6-6-2.7-6-6-6zm0 10c-2.2 0-4-1.8-4-4s1.8-4 4-4 4 1.8 4 4-1.8 4-4 4z"/>
+                                    </svg>
+                                    <div class="feature-text">
+                                        <h4>Modo Sin Conexión</h4>
+                                        <p>Accede a información crítica incluso sin internet (US-13)</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="segment-cta">
+                                <a href="#descargar" class="btn btn--primary">Descargar para Ciudadanos</a>
+                                <a href="#" class="btn btn--secondary">Ver todas las funciones</a>
+                            </div>
+                        </div>
+
+                        <div class="segment-panel__image">
+                            <img src="Imagenes/Ciudadanos.png" alt="Ciudadano usando InundaMap" class="segment-image">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Authorities Tab -->
+                <div class="segment-panel" data-panel="authorities">
+                    <div class="segment-panel__content">
+                        <div class="segment-panel__text">
+                            <h3 class="segment-panel__title">Para Autoridades y Entidades de Emergencia</h3>
+                            <p class="segment-panel__description">
+                                Personal de municipalidades, Defensa Civil, bomberos y otras instituciones 
+                                que coordinan la respuesta ante inundaciones. InundaMap facilita la gestión 
+                                centralizada de reportes y recursos.
+                            </p>
+
+                            <div class="feature-list">
+                                <div class="feature-item">
+                                    <svg class="feature-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                        <path d="M18 2H2v16h16V2zm-2 14H4V4h12v12z"/>
+                                        <circle cx="10" cy="10" r="3"/>
+                                    </svg>
+                                    <div class="feature-text">
+                                        <h4>Panel de Control de Alertas</h4>
+                                        <p>Emite y gestiona alertas oficiales por zonas</p>
+                                    </div>
+                                </div>
+
+                                <div class="feature-item">
+                                    <svg class="feature-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                        <path d="M10 0C4.5 0 0 4.5 0 10s4.5 10 10 10 10-4.5 10-10S15.5 0 10 0zm5 13l-1.5 1.5L10 11v-1h1l3.5 3.5z"/>
+                                    </svg>
+                                    <div class="feature-text">
+                                        <h4>Actualización de Mapas en Tiempo Real</h4>
+                                        <p>Mantén actualizados los niveles de riesgo</p>
+                                    </div>
+                                </div>
+
+                                <div class="feature-item">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="#0A4C8C">
+                                        <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/>
+                                    </svg>
+
+                                    <div class="feature-text">
+                                        <h4>Gestión de Refugios</h4>
+                                        <p>Registra y monitorea refugios con capacidad y estado</p>
+                                    </div>
+                                </div>
+
+                                <div class="feature-item">
+                                    <svg class="feature-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                        <rect x="2" y="2" width="16" height="16" rx="2"/>
+                                        <path d="M6 8h8M6 12h8" stroke="#fff" stroke-width="2"/>
+                                    </svg>
+                                    <div class="feature-text">
+                                        <h4>Validación de Reportes Ciudadanos</h4>
+                                        <p>Revisa y aprueba reportes antes de publicar</p>
+                                    </div>
+                                </div>
+
+                                <div class="feature-item">
+                                    <svg class="feature-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                        <path d="M2 2h16v4H2zm0 6h16v4H2zm0 6h16v4H2z"/>
+                                    </svg>
+                                    <div class="feature-text">
+                                        <h4>Estadísticas y Reportes</h4>
+                                        <p>Analiza tendencias y genera informes exportables</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="segment-cta">
+                                <a href="#" class="btn btn--primary">Solicitar Acceso Institucional</a>
+                                <a href="#" class="btn btn--secondary">Ver demo del panel</a>
+                            </div>
+                        </div>
+
+                        <div class="segment-panel__image">
+                            <img src="Imagenes/Autoridades.png" alt="Panel de control para autoridades" class="segment-image">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Volunteers Tab -->
+                <div class="segment-panel" data-panel="volunteers">
+                    <div class="segment-panel__content">
+                        <div class="segment-panel__text">
+                            <h3 class="segment-panel__title">Para Voluntarios y Brigadas Comunitarias</h3>
+                            <p class="segment-panel__description">
+                                Personas organizadas en brigadas que ofrecen apoyo local durante emergencias. 
+                                InundaMap les permite coordinar mejor sus esfuerzos, evitar duplicidades 
+                                y maximizar el impacto de su ayuda.
+                            </p>
+
+                            <div class="feature-list">
+                                <div class="feature-item">
+                                    <svg class="feature-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                        <path d="M10 0C4.5 0 0 4.5 0 10s4.5 10 10 10 10-4.5 10-10S15.5 0 10 0zm5 10.5h-4.5V15h-1v-4.5H5v-1h4.5V5h1v4.5H15v1z"/>
+                                    </svg>
+                                    <div class="feature-text">
+                                        <h4>Registro de Organizaciones</h4>
+                                        <p>Registra tu grupo y coordina con autoridades</p>
+                                    </div>
+                                </div>
+
+                                <div class="feature-item">
+                                    <svg class="feature-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                        <path d="M10 0C4.5 0 0 4.5 0 10s4.5 10 10 10 10-4.5 10-10S15.5 0 10 0zm0 17.5c-4.1 0-7.5-3.4-7.5-7.5S5.9 2.5 10 2.5s7.5 3.4 7.5 7.5-3.4 7.5-7.5 7.5z"/>
+                                    </svg>
+                                    <div class="feature-text">
+                                        <h4>Asignación de Zonas de Ayuda</h4>
+                                        <p>Recibe zonas asignadas y evita duplicar esfuerzos</p>
+                                    </div>
+                                </div>
+
+                                <div class="feature-item">
+                                    <svg class="feature-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                        <rect x="2" y="2" width="16" height="16" rx="2"/>
+                                        <path d="M6 8h8M6 12h5" stroke="#fff" stroke-width="2"/>
+                                    </svg>
+                                    <div class="feature-text">
+                                        <h4>Registro de Asistencia Entregada</h4>
+                                        <p>Documenta recursos distribuidos con fotos</p>
+                                    </div>
+                                </div>
+
+                                <div class="feature-item">
+                                    <svg class="feature-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                        <path d="M18 8h-2V4c0-1.1-.9-2-2-2H6c-1.1 0-2 .9-2 2v4H2v10h16V8zm-4 0H6V4h8v4z"/>
+                                    </svg>
+                                    <div class="feature-text">
+                                        <h4>Comunicación con Autoridades</h4>
+                                        <p>Canal directo para instrucciones y reportes</p>
+                                    </div>
+                                </div>
+
+                                <div class="feature-item">
+                                    <svg class="feature-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                        <path d="M10 0L7.5 7.5L0 10l7.5 2.5L10 20l2.5-7.5L20 10l-7.5-2.5L10 0z"/>
+                                    </svg>
+                                    <div class="feature-text">
+                                        <h4>Visualización de Zonas Críticas</h4>
+                                        <p>Identifica áreas prioritarias en tiempo real</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="segment-cta">
+                                <a href="#" class="btn btn--primary">Registrar Organización</a>
+                                <a href="#" class="btn btn--secondary">Unirse como voluntario</a>
+                            </div>
+                        </div>
+
+                        <div class="segment-panel__image">
+                            <img src="Imagenes/Voluntariado.png" alt="Voluntarios coordinando en InundaMap" class="segment-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Testimonios reales</span>
+                <h2 class="section-title">Lo que dicen nuestros usuarios</h2>
+                <p class="section-description">
+                    Conoce las experiencias de ciudadanos, autoridades y voluntarios 
+                    que han utilizado InundaMap durante emergencias reales.
+                </p>
+            </div>
+
+            <div class="testimonials__grid">
+                <article class="testimonial-card">
+                    <div class="testimonial-card__header">
+                        <div class="testimonial-card__avatar">
+                            <svg viewBox="0 0 40 40" fill="none">
+                                <circle cx="20" cy="20" r="20" fill="#6FD9E1"/>
+                                <path d="M20 12c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4zm0 10c-2.7 0-8 1.3-8 4v2h16v-2c0-2.7-5.3-4-8-4z" fill="#0A4C8C"/>
+                            </svg>
+                        </div>
+                        <div class="testimonial-card__info">
+                            <h4 class="testimonial-card__name">María Torres</h4>
+                            <p class="testimonial-card__role">Ciudadana - Piura</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-card__rating">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="#F2C14E">
+                            <path d="M8 0l2.5 5.1 5.5.8-4 3.9.9 5.5L8 12.8 3.1 15.3l.9-5.5-4-3.9 5.5-.8L8 0z"/>
+                        </svg>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="#F2C14E">
+                            <path d="M8 0l2.5 5.1 5.5.8-4 3.9.9 5.5L8 12.8 3.1 15.3l.9-5.5-4-3.9 5.5-.8L8 0z"/>
+                        </svg>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="#F2C14E">
+                            <path d="M8 0l2.5 5.1 5.5.8-4 3.9.9 5.5L8 12.8 3.1 15.3l.9-5.5-4-3.9 5.5-.8L8 0z"/>
+                        </svg>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="#F2C14E">
+                            <path d="M8 0l2.5 5.1 5.5.8-4 3.9.9 5.5L8 12.8 3.1 15.3l.9-5.5-4-3.9 5.5-.8L8 0z"/>
+                        </svg>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="#F2C14E">
+                            <path d="M8 0l2.5 5.1 5.5.8-4 3.9.9 5.5L8 12.8 3.1 15.3l.9-5.5-4-3.9 5.5-.8L8 0z"/>
+                        </svg>
+                    </div>
+                    <blockquote class="testimonial-card__quote">
+                        "Gracias a la alerta temprana de InundaMap, pude evacuar a mi familia 
+                        a tiempo. La aplicación me mostró el refugio más cercano y la ruta 
+                        más segura. Es una herramienta que salva vidas."
+                    </blockquote>
+                    <time class="testimonial-card__date">Febrero 2025</time>
+                </article>
+
+                <article class="testimonial-card testimonial-card--featured">
+                    <div class="testimonial-card__header">
+                        <div class="testimonial-card__avatar">
+                            <svg viewBox="0 0 40 40" fill="none">
+                                <circle cx="20" cy="20" r="20" fill="#215FF6"/>
+                                <path d="M20 12c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4zm0 10c-2.7 0-8 1.3-8 4v2h16v-2c0-2.7-5.3-4-8-4z" fill="#fff"/>
+                            </svg>
+                        </div>
+                        <div class="testimonial-car__infod">
+                            <h4 class="testimonial-card__name_especial">Dr. Mike Mentzer</h4>
+                            <p class="testimonial-card__role">Director - Defensa Civil Lambayeque</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-card__rating">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="#F2C14E">
+                            <path d="M8 0l2.5 5.1 5.5.8-4 3.9.9 5.5L8 12.8 3.1 15.3l.9-5.5-4-3.9 5.5-.8L8 0z"/>
+                        </svg>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="#F2C14E">
+                            <path d="M8 0l2.5 5.1 5.5.8-4 3.9.9 5.5L8 12.8 3.1 15.3l.9-5.5-4-3.9 5.5-.8L8 0z"/>
+                        </svg>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="#F2C14E">
+                            <path d="M8 0l2.5 5.1 5.5.8-4 3.9.9 5.5L8 12.8 3.1 15.3l.9-5.5-4-3.9 5.5-.8L8 0z"/>
+                        </svg>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="#F2C14E">
+                            <path d="M8 0l2.5 5.1 5.5.8-4 3.9.9 5.5L8 12.8 3.1 15.3l.9-5.5-4-3.9 5.5-.8L8 0z"/>
+                        </svg>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="#F2C14E">
+                            <path d="M8 0l2.5 5.1 5.5.8-4 3.9.9 5.5L8 12.8 3.1 15.3l.9-5.5-4-3.9 5.5-.8L8 0z"/>
+                        </svg>
+                    </div>
+                    <blockquote class="testimonial-card__quote">
+                        "InundaMap ha transformado nuestra capacidad de respuesta. Los reportes 
+                        ciudadanos verificados nos permiten priorizar recursos y coordinar mejor 
+                        con otras instituciones. Hemos reducido nuestro tiempo de respuesta en un 35%."
+                    </blockquote>
+                    <time class="testimonial-card__date">Enero 2025</time>
+                </article>
+
+                <article class="testimonial-card">
+                    <div class="testimonial-card__header">
+                        <div class="testimonial-card__avatar">
+                            <svg viewBox="0 0 40 40" fill="none">
+                                <circle cx="20" cy="20" r="20" fill="#1E875C"/>
+                                <path d="M20 12c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4zm0 10c-2.7 0-8 1.3-8 4v2h16v-2c0-2.7-5.3-4-8-4z" fill="#fff"/>
+                            </svg>
+                        </div>
+                        <div class="testimonial-card__info">
+                            <h4 class="testimonial-card__name">Rosa Gutiérrez</h4>
+                            <p class="testimonial-card__role">Coordinadora - Brigada Los Olivos</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-card__rating">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="#F2C14E">
+                            <path d="M8 0l2.5 5.1 5.5.8-4 3.9.9 5.5L8 12.8 3.1 15.3l.9-5.5-4-3.9 5.5-.8L8 0z"/>
+                        </svg>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="#F2C14E">
+                            <path d="M8 0l2.5 5.1 5.5.8-4 3.9.9 5.5L8 12.8 3.1 15.3l.9-5.5-4-3.9 5.5-.8L8 0z"/>
+                        </svg>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="#F2C14E">
+                            <path d="M8 0l2.5 5.1 5.5.8-4 3.9.9 5.5L8 12.8 3.1 15.3l.9-5.5-4-3.9 5.5-.8L8 0z"/>
+                        </svg>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="#F2C14E">
+                            <path d="M8 0l2.5 5.1 5.5.8-4 3.9.9 5.5L8 12.8 3.1 15.3l.9-5.5-4-3.9 5.5-.8L8 0z"/>
+                        </svg>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="#F2C14E">
+                            <path d="M8 0l2.5 5.1 5.5.8-4 3.9.9 5.5L8 12.8 3.1 15.3l.9-5.5-4-3.9 5.5-.8L8 0z"/>
+                        </svg>
+                    </div>
+                    <blockquote class="testimonial-card__quote">
+                        "La función de asignación de zonas evita que duplicamos esfuerzos. 
+                        Ahora sabemos exactamente dónde ir, qué llevar y podemos registrar 
+                        todo el apoyo que brindamos. Es perfecta para brigadas comunitarias."
+                    </blockquote>
+                    <time class="testimonial-card__date">Marzo 2025</time>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta" id="descargar">
+        <div class="container">
+            <div class="cta__content">
+                <div class="cta__text">
+                    <span class="cta__tag">Descarga gratuita</span>
+                    <h2 class="cta__title">
+                        Descarga InundaMap y protege a tu comunidad
+                    </h2>
+                    <p class="cta__description">
+                        Disponible para Android e iOS. Comienza a recibir alertas tempranas, 
+                        consulta mapas de riesgo y coordina con tu comunidad desde hoy.
+                    </p>
+                    <div class="cta__buttons">
+                        <a href="#" class="store-btn store-btn--android">
+                            <svg class="store-icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/>
+                            </svg>
+                            <div class="store-text">
+                                <span class="store-label">Descárgalo en</span>
+                                <span class="store-name">Google Play</span>
+                            </div>
+                        </a>
+                        <a href="#" class="store-btn store-btn--ios">
+                            <svg class="store-icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18.71,19.5C17.88,20.74 17,21.95 15.66,21.97C14.32,22 13.89,21.18 12.37,21.18C10.84,21.18 10.37,21.95 9.1,22C7.79,22.05 6.8,20.68 5.96,19.47C4.25,17 2.94,12.45 4.7,9.39C5.57,7.87 7.13,6.91 8.82,6.88C10.1,6.86 11.32,7.75 12.11,7.75C12.89,7.75 14.37,6.68 15.92,6.84C16.57,6.87 18.39,7.1 19.56,8.82C19.47,8.88 17.39,10.1 17.41,12.63C17.44,15.65 20.06,16.66 20.09,16.67C20.06,16.74 19.67,18.11 18.71,19.5M13,3.5C13.73,2.67 14.94,2.04 15.94,2C16.07,3.17 15.6,4.35 14.9,5.19C14.21,6.04 13.07,6.7 11.95,6.61C11.8,5.46 12.36,4.26 13,3.5Z"/>
+                            </svg>
+                            <div class="store-text">
+                                <span class="store-label">Descárgalo en</span>
+                                <span class="store-name">App Store</span>
+                            </div>
+                        </a>
+                    </div>
+                    <p class="cta__note">
+                        También puedes acceder desde tu navegador web en 
+                        <a href="#">app.inundamap.pe</a>
+                    </p>
+                </div>
+                <div class="cta__image">
+                    <img src="Imagenes/EjemploApp.png" alt="InundaMap en móvil" class="cta__phone">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contacto">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section footer__section--about">
+                    <div class="footer__logo">
+                        <img src="Imagenes/LogoInundaMap.png" alt="InundaMap Logo" class="logo-icon">
+                        <span class="logo-text">InundaMap</span>
+                    </div>
+                    <p class="footer__description">
+                        Conectando comunidades y autoridades para prevenir y responder 
+                        eficazmente ante inundaciones en el Perú.
+                    </p>
+                    <div class="footer__social">
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2C6.5 2 2 6.5 2 12c0 5 3.7 9.1 8.4 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.3v7C18.3 21.1 22 17 22 12c0-5.5-4.5-10-10-10z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M22.46,6C21.69,6.35 20.86,6.58 20,6.69C20.88,6.16 21.56,5.32 21.88,4.31C21.05,4.81 20.13,5.16 19.16,5.36C18.37,4.5 17.26,4 16,4C13.65,4 11.73,5.92 11.73,8.29C11.73,8.63 11.77,8.96 11.84,9.27C8.28,9.09 5.11,7.38 3,4.79C2.63,5.42 2.42,6.16 2.42,6.94C2.42,8.43 3.17,9.75 4.33,10.5C3.62,10.5 2.96,10.3 2.38,10C2.38,10 2.38,10 2.38,10.03C2.38,12.11 3.86,13.85 5.82,14.24C5.46,14.34 5.08,14.39 4.69,14.39C4.42,14.39 4.15,14.36 3.89,14.31C4.43,16 6,17.26 7.89,17.29C6.43,18.45 4.58,19.13 2.56,19.13C2.22,19.13 1.88,19.11 1.54,19.07C3.44,20.29 5.70,21 8.12,21C16,21 20.33,14.46 20.33,8.79C20.33,8.6 20.33,8.42 20.32,8.23C21.16,7.63 21.88,6.87 22.46,6Z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="YouTube">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M10,15L15.19,12L10,9V15M21.56,7.17C21.69,7.64 21.78,8.27 21.84,9.07C21.91,9.87 21.94,10.56 21.94,11.16L22,12C22,14.19 21.84,15.8 21.56,16.83C21.31,17.73 20.73,18.31 19.83,18.56C19.36,18.69 18.5,18.78 17.18,18.84C15.88,18.91 14.69,18.94 13.59,18.94L12,19C7.81,19 5.2,18.84 4.17,18.56C3.27,18.31 2.69,17.73 2.44,16.83C2.31,16.36 2.22,15.73 2.16,14.93C2.09,14.13 2.06,13.44 2.06,12.84L2,12C2,9.81 2.16,8.2 2.44,7.17C2.69,6.27 3.27,5.69 4.17,5.44C4.64,5.31 5.5,5.22 6.82,5.16C8.12,5.09 9.31,5.06 10.41,5.06L12,5C16.19,5 18.8,5.16 19.83,5.44C20.73,5.69 21.31,6.27 21.56,7.17Z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer__section">
+                    <h3 class="footer__title">Navegación</h3>
+                    <ul class="footer__links">
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#servicios">Servicios</a></li>
+                        <li><a href="#mapa">Mapa Interactivo</a></li>
+                        <li><a href="#segmentos">Para Ti</a></li>
+                        <li><a href="#descargar">Descargar App</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__section">
+                    <h3 class="footer__title">Recursos</h3>
+                    <ul class="footer__links">
+                        <li><a href="#">Centro de Ayuda</a></li>
+                        <li><a href="#">Guías de Emergencia</a></li>
+                        <li><a href="#">Preguntas Frecuentes</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">API Developers</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__section">
+                    <h3 class="footer__title">Contacto</h3>
+                    <ul class="footer__links footer__links--contact">
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M10 0C6.13 0 3 3.13 3 7c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                            </svg>
+                            <span>Lima, Perú</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M17 12.5c-.8 0-1.5-.2-2.2-.4-.2-.1-.4-.1-.6 0l-1.4 1.4c-1.8-.9-3.2-2.4-4.2-4.2l1.4-1.4c.2-.2.2-.4.1-.6-.3-.7-.5-1.5-.5-2.3 0-.6-.4-1-1-1H5c-.6 0-1 .4-1 1 0 7.2 5.8 13 13 13 .6 0 1-.4 1-1v-3.5c0-.6-.4-1-1-1z"/>
+                            </svg>
+                            <span>+51 999 888 777</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M18 4H2C.9 4 0 4.9 0 6v8c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                            </svg>
+                            <span>contacto@inundamap.pe</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer__section">
+                    <h3 class="footer__title">Emergencias 24/7</h3>
+                    <ul class="footer__links footer__links--emergency">
+                        <li>
+                            <strong>INDECI:</strong> 115
+                        </li>
+                        <li>
+                            <strong>Bomberos:</strong> 116
+                        </li>
+                        <li>
+                            <strong>Policía:</strong> 105
+                        </li>
+                        <li>
+                            <strong>SAMU:</strong> 106
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <p class="footer__copyright">
+                    &copy; 2025 InundaMap - GeoAlerta. Todos los derechos reservados.
+                </p>
+                <div class="footer__legal">
+                    <a href="#">Política de Privacidad</a>
+                    <span class="separator">|</span>
+                    <a href="#">Términos de Uso</a>
+                    <span class="separator">|</span>
+                    <a href="#">Condiciones del Servicio</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top" aria-label="Volver arriba">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/>
+        </svg>
+    </button>
+
+    <script src="app.js"></script>
+    
+    <!-- Google Maps API Integration (Simulated for demo) -->
+    <script>
+        // This would be replaced with actual Google Maps API key in production
+        // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+    </script>
+</body>
+</html>

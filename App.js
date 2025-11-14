@@ -1,4 +1,14 @@
+/**
+ * INUNDAMAP - LANDING PAGE JAVASCRIPT
+ * Version: 1.0
+ * Description: Interactive functionality for InundaMap landing page
+ */
 
+// ==================== UTILITY FUNCTIONS ====================
+
+/**
+ * Debounce function to limit function calls
+ */
 const debounce = (func, wait) => {
     let timeout;
     return function executedFunction(...args) {
@@ -11,7 +21,9 @@ const debounce = (func, wait) => {
     };
 };
 
-
+/**
+ * Throttle function for scroll events
+ */
 const throttle = (func, limit) => {
     let inThrottle;
     return function() {
@@ -25,7 +37,7 @@ const throttle = (func, limit) => {
     };
 };
 
-
+// ==================== DOM ELEMENTS ====================
 
 const header = document.getElementById('header');
 const navToggle = document.getElementById('nav-toggle');
@@ -40,11 +52,15 @@ const segmentPanels = document.querySelectorAll('.segment-panel');
 const filterButtons = document.querySelectorAll('.filter-btn');
 const mapSearchInput = document.getElementById('map-search-input');
 
-// ====================  Navigacion para el movil ====================
+// ==================== MOBILE NAVIGATION ====================
 
+/**
+ * Toggle mobile navigation menu
+ */
 const toggleMobileNav = () => {
     navMenu.classList.toggle('active');
     
+    // Animate hamburger icon
     const hamburgerLines = navToggle.querySelectorAll('.hamburger');
     if (navMenu.classList.contains('active')) {
         hamburgerLines[0].style.transform = 'rotate(45deg) translateY(8px)';
@@ -61,7 +77,9 @@ if (navToggle) {
     navToggle.addEventListener('click', toggleMobileNav);
 }
 
-
+/**
+ * Close mobile menu when clicking nav links
+ */
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
         if (navMenu.classList.contains('active')) {
@@ -70,7 +88,10 @@ navLinks.forEach(link => {
     });
 });
 
-ment.addEventListener('click', (e) => {
+/**
+ * Close mobile menu when clicking outside
+ */
+document.addEventListener('click', (e) => {
     if (navMenu.classList.contains('active') && 
         !navMenu.contains(e.target) && 
         !navToggle.contains(e.target)) {
@@ -78,6 +99,11 @@ ment.addEventListener('click', (e) => {
     }
 });
 
+// ==================== HEADER SCROLL EFFECTS ====================
+
+/**
+ * Add/remove header shadow on scroll
+ */
 const handleHeaderScroll = throttle(() => {
     if (window.scrollY > 50) {
         header.classList.add('scrolled');
@@ -88,10 +114,16 @@ const handleHeaderScroll = throttle(() => {
 
 window.addEventListener('scroll', handleHeaderScroll);
 
+// ==================== SMOOTH SCROLLING ====================
+
+/**
+ * Smooth scroll to sections
+ */
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         const href = this.getAttribute('href');
         
+        // Ignore empty anchors
         if (href === '#') return;
         
         e.preventDefault();
@@ -109,7 +141,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// ==================== ALERT BANNER ====================
 
+/**
+ * Close alert banner
+ */
 if (alertClose) {
     alertClose.addEventListener('click', () => {
         alertBanner.style.display = 'none';
@@ -117,13 +153,20 @@ if (alertClose) {
     });
 }
 
-
+/**
+ * Check if alert was previously closed
+ */
 if (sessionStorage.getItem('alertClosed') === 'true') {
     if (alertBanner) {
         alertBanner.style.display = 'none';
     }
 }
 
+// ==================== ANIMATED STATISTICS ====================
+
+/**
+ * Animate stat numbers on scroll
+ */
 const animateStats = () => {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -138,7 +181,9 @@ const animateStats = () => {
     statNumbers.forEach(stat => observer.observe(stat));
 };
 
-
+/**
+ * Animate number from 0 to target
+ */
 const animateNumber = (element, target) => {
     const duration = 2000;
     const increment = target / (duration / 16);
@@ -157,22 +202,32 @@ const animateNumber = (element, target) => {
     updateNumber();
 };
 
+// Initialize stat animation
 if (statNumbers.length > 0) {
     animateStats();
 }
 
+// ==================== SEGMENT TABS ====================
+
+/**
+ * Switch between user segment tabs
+ */
 segmentTabs.forEach(tab => {
     tab.addEventListener('click', () => {
         const targetSegment = tab.dataset.segment;
         
+        // Remove active class from all tabs
         segmentTabs.forEach(t => t.classList.remove('segment-tab--active'));
         
+        // Add active class to clicked tab
         tab.classList.add('segment-tab--active');
         
+        // Hide all panels
         segmentPanels.forEach(panel => {
             panel.classList.remove('segment-panel--active');
         });
         
+        // Show target panel
         const targetPanel = document.querySelector(`[data-panel="${targetSegment}"]`);
         if (targetPanel) {
             targetPanel.classList.add('segment-panel--active');
@@ -180,11 +235,16 @@ segmentTabs.forEach(tab => {
     });
 });
 
+// ==================== MAP FILTERS ====================
 
+/**
+ * Handle map filter buttons
+ */
 filterButtons.forEach(button => {
     button.addEventListener('click', () => {
         const filter = button.dataset.filter;
         
+        // Toggle active state
         filterButtons.forEach(btn => {
             if (btn === button) {
                 btn.classList.toggle('filter-btn--active');
@@ -193,6 +253,7 @@ filterButtons.forEach(button => {
             }
         });
         
+        // If "all" button clicked, remove active from others
         if (filter === 'all') {
             filterButtons.forEach(btn => {
                 if (btn !== button) {
@@ -201,14 +262,18 @@ filterButtons.forEach(button => {
             });
         }
         
+        // Apply filter (simulated - would integrate with actual map API)
         applyMapFilter(filter);
     });
 });
 
-
+/**
+ * Apply filter to map (simulated)
+ */
 const applyMapFilter = (filter) => {
     console.log(`Applying filter: ${filter}`);
     
+    // In production, this would filter the actual map markers
     const infoCards = document.querySelectorAll('.info-card');
     
     if (filter === 'all') {
@@ -220,6 +285,7 @@ const applyMapFilter = (filter) => {
         const cardType = Array.from(card.classList).find(cls => cls.includes('info-card--'));
         const cardFilter = cardType ? cardType.split('--')[1] : '';
         
+        // Map filter types to card types
         const filterMap = {
             'high': 'alert',
             'medium': 'report',
@@ -235,12 +301,18 @@ const applyMapFilter = (filter) => {
     });
 };
 
+// ==================== MAP SEARCH ====================
 
+/**
+ * Handle map search input
+ */
 if (mapSearchInput) {
     const handleMapSearch = debounce((e) => {
         const query = e.target.value.toLowerCase().trim();
         console.log(`Searching for: ${query}`);
-    
+        
+        // In production, this would query the actual map API
+        // For now, we'll simulate filtering info cards
         const infoCards = document.querySelectorAll('.info-card');
         
         if (query === '') {
@@ -263,12 +335,56 @@ if (mapSearchInput) {
     mapSearchInput.addEventListener('input', handleMapSearch);
 }
 
+// ==================== GOOGLE MAPS INTEGRATION (SIMULATED) ====================
 
+/**
+ * Initialize Google Maps
+ * In production, this would use the actual Google Maps API
+ */
 const initMap = () => {
     console.log('Initializing map...');
+    
+    // This is a placeholder. In production, you would initialize the actual map:
+    /*
+    const map = new google.maps.Map(document.getElementById('map'), {
+        center: { lat: -12.0464, lng: -77.0428 }, // Lima, Peru
+        zoom: 8,
+        styles: customMapStyles // Optional custom styling
+    });
+    
+    // Add markers for alerts, shelters, etc.
+    const markers = [
+        {
+            position: { lat: -5.1945, lng: -80.6328 }, // Piura
+            type: 'alert',
+            title: 'Alerta de inundación - Piura'
+        },
+        // ... more markers
+    ];
+    
+    markers.forEach(markerData => {
+        const marker = new google.maps.Marker({
+            position: markerData.position,
+            map: map,
+            title: markerData.title,
+            icon: getMarkerIcon(markerData.type)
+        });
+        
+        // Add info window
+        const infoWindow = new google.maps.InfoWindow({
+            content: createInfoWindowContent(markerData)
+        });
+        
+        marker.addListener('click', () => {
+            infoWindow.open(map, marker);
+        });
+    });
+    */
 };
 
-
+/**
+ * Simulate map loading
+ */
 setTimeout(() => {
     const mapPlaceholder = document.querySelector('.map-placeholder');
     if (mapPlaceholder) {
@@ -285,7 +401,11 @@ setTimeout(() => {
     }
 }, 1000);
 
+// ==================== BACK TO TOP BUTTON ====================
 
+/**
+ * Show/hide back to top button
+ */
 const handleBackToTop = throttle(() => {
     if (window.scrollY > 500) {
         backToTop.classList.add('visible');
@@ -296,7 +416,9 @@ const handleBackToTop = throttle(() => {
 
 window.addEventListener('scroll', handleBackToTop);
 
-
+/**
+ * Scroll to top on button click
+ */
 if (backToTop) {
     backToTop.addEventListener('click', () => {
         window.scrollTo({
@@ -306,6 +428,11 @@ if (backToTop) {
     });
 }
 
+// ==================== INTERSECTION OBSERVER FOR ANIMATIONS ====================
+
+/**
+ * Add fade-in animation to elements on scroll
+ */
 const observeElements = () => {
     const options = {
         threshold: 0.1,
@@ -321,33 +448,48 @@ const observeElements = () => {
         });
     }, options);
     
+    // Observe service cards
     document.querySelectorAll('.service-card').forEach(card => {
         observer.observe(card);
     });
     
+    // Observe info cards
     document.querySelectorAll('.info-card').forEach(card => {
         observer.observe(card);
     });
     
+    // Observe testimonial cards
     document.querySelectorAll('.testimonial-card').forEach(card => {
         observer.observe(card);
     });
 };
 
+// Initialize animations
 observeElements();
 
+// ==================== FORM VALIDATION (IF NEEDED) ====================
 
+/**
+ * Validate email format
+ */
 const isValidEmail = (email) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
 };
 
+/**
+ * Validate phone number format (Peru)
+ */
 const isValidPhone = (phone) => {
     const phoneRegex = /^(\+51|0)?[9]\d{8}$/;
     return phoneRegex.test(phone.replace(/\s/g, ''));
 };
 
+// ==================== PERFORMANCE OPTIMIZATION ====================
 
+/**
+ * Lazy load images
+ */
 const lazyLoadImages = () => {
     const images = document.querySelectorAll('img[data-src]');
     
@@ -365,37 +507,69 @@ const lazyLoadImages = () => {
     images.forEach(img => imageObserver.observe(img));
 };
 
+// Initialize lazy loading if needed
+// lazyLoadImages();
 
+// ==================== ERROR HANDLING ====================
+
+/**
+ * Global error handler
+ */
 window.addEventListener('error', (e) => {
     console.error('Global error:', e.error);
+    // In production, you might want to send errors to a logging service
 });
 
-
+/**
+ * Handle unhandled promise rejections
+ */
 window.addEventListener('unhandledrejection', (e) => {
     console.error('Unhandled promise rejection:', e.reason);
 });
 
+// ==================== INITIALIZATION ====================
 
+/**
+ * Initialize app when DOM is fully loaded
+ */
 document.addEventListener('DOMContentLoaded', () => {
     console.log('InundaMap landing page initialized');
     
+    // Run initial checks
     handleHeaderScroll();
     handleBackToTop();
     
+    // Log environment info
     console.log('User Agent:', navigator.userAgent);
     console.log('Screen Resolution:', `${window.screen.width}x${window.screen.height}`);
 });
 
+/**
+ * Handle page load complete
+ */
 window.addEventListener('load', () => {
     console.log('Page fully loaded');
+    // Initialize map or other heavy resources here
     initMap();
 });
 
+// ==================== ANALYTICS (PLACEHOLDER) ====================
+
+/**
+ * Track user interactions
+ * In production, integrate with Google Analytics, Mixpanel, etc.
+ */
 const trackEvent = (category, action, label) => {
     console.log('Event tracked:', { category, action, label });
-
+    
+    // Example Google Analytics integration:
+    // gtag('event', action, {
+    //     'event_category': category,
+    //     'event_label': label
+    // });
 };
 
+// Track button clicks
 document.querySelectorAll('.btn').forEach(btn => {
     btn.addEventListener('click', (e) => {
         const label = e.target.textContent.trim();
@@ -403,6 +577,7 @@ document.querySelectorAll('.btn').forEach(btn => {
     });
 });
 
+// Track navigation
 navLinks.forEach(link => {
     link.addEventListener('click', (e) => {
         const section = e.target.getAttribute('href');

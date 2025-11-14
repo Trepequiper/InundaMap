@@ -225,12 +225,13 @@ input, textarea {
 
 .btn--primary {
     background: var(--color-accent-blue);
-    color: var(--color-white);
+    color: white;
     box-shadow: 0 4px 12px rgba(33, 95, 246, 0.3);
 }
 
 .btn--primary:hover {
     background: var(--color-primary);
+    color:var(--color-warning);
     transform: translateY(-2px);
     box-shadow: 0 6px 16px rgba(33, 95, 246, 0.4);
 }
@@ -241,13 +242,14 @@ input, textarea {
 
 .btn--secondary {
     background: transparent;
-    color: var(--color-primary);
+    color: #0A4C8C;
     border: 2px solid var(--color-primary);
 }
 
 .btn--secondary:hover {
     background: var(--color-primary);
-    color: var(--color-white);
+    color:var(--color-warning);
+
 }
 
 .btn--outline {
@@ -436,6 +438,7 @@ input, textarea {
     font-weight: 600;
     margin-bottom: 30px;
     border: 1px solid rgba(255, 255, 255, 0.3);
+    margin-left: 180px;
 }
 
 .hero__title {
@@ -658,7 +661,7 @@ input, textarea {
 .service-card--featured .service-card__title,
 .service-card--featured .service-card__description,
 .service-card--featured .service-card__features {
-    color: var(--color-white);
+    color: white;
 }
 
 .service-card__icon {
@@ -673,7 +676,13 @@ input, textarea {
 }
 
 .service-card__icon--alert { background: var(--color-danger); }
-.service-card__icon--map { background: var(--color-accent-blue); }
+.map-placeholder iframe {
+    width: 1004px;
+    height: 500px; /* O el alto que quieras */
+    border: none;
+    height: 400px;
+}
+
 .service-card__icon--shelter { background: var(--color-success); }
 .service-card__icon--report { background: var(--color-warning); }
 .service-card__icon--offline { background: var(--color-gray); }
@@ -707,6 +716,7 @@ input, textarea {
     list-style: none;
     margin-bottom: var(--spacing-lg);
 }
+
 
 .service-card__features li {
     position: relative;
@@ -1188,6 +1198,9 @@ input, textarea {
     font-weight: 700;
     margin-bottom: 0.25rem;
 }
+.testimonial-card__name_especial{
+    color: white !important;
+}
 
 .testimonial-card__role {
     font-size: 0.875rem;
@@ -1372,6 +1385,7 @@ input, textarea {
     color: rgba(255, 255, 255, 0.7);
     line-height: 1.6;
     margin-bottom: var(--spacing-md);
+    text-align: center;
 }
 
 .footer__social {
