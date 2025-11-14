@@ -674,15 +674,7 @@ input, textarea {
     margin-bottom: var(--spacing-md);
     color: var(--color-white);
 }
-
 .service-card__icon--alert { background: var(--color-danger); }
-.map-placeholder iframe {
-    width: 1004px;
-    height: 500px; /* O el alto que quieras */
-    border: none;
-    height: 400px;
-}
-
 .service-card__icon--shelter { background: var(--color-success); }
 .service-card__icon--report { background: var(--color-warning); }
 .service-card__icon--offline { background: var(--color-gray); }
@@ -731,6 +723,9 @@ input, textarea {
     left: 0;
     color: var(--color-success);
     font-weight: 700;
+}
+.service-card__features ul{
+    color: white;
 }
 
 .service-card__link {
@@ -878,10 +873,6 @@ input, textarea {
     color: var(--color-gray);
 }
 
-.map-placeholder__icon {
-    margin-bottom: var(--spacing-md);
-    opacity: 0.5;
-}
 
 .map-legend {
     position: absolute;
