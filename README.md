@@ -24,7 +24,7 @@ Incluye municipalidades y gobiernos locales responsables de la gestión del ries
  
 ### Segmento 3: Voluntarios y Brigadas Comunitarias
 Conformado por líderes barriales y brigadistas que actúan en primera línea. Son quienes organizan evacuaciones y brindan apoyo inmediato, pero con recursos limitados y poca información actualizada. Este segmento busca entender su dinámica de coordinación y cómo una herramienta como InundaMap podría fortalecer sus acciones.
-Preguntas clave:
+#### Preguntas clave:
 * Actividades realizadas durante emergencias.
 * Herramientas actuales de comunicación.
 * Retos en la coordinación en tiempo real.
@@ -39,7 +39,7 @@ Los usuarios pueden enviar reportes inmediatos sobre inundaciones, huaicos o ani
 
 #### La plataforma muestra un mapa dinámico con:
 * Zonas inundadas o en riesgo.
-* Niveles de alerta ( verde, amarillo, rojo )
+* Niveles de alerta **( verde, amarillo, rojo )**
 * Zonas seguras y puntos de evacuación.
 * Rutas seguras y áreas bloqueadas.
 
@@ -78,7 +78,7 @@ Los usuarios pueden enviar reportes inmediatos sobre inundaciones, huaicos o ani
 #### La plataforma integra:
 * Validación de reportes con evidencia visual
 * Filtros contra información falsa o duplicada
-* Integración con datos oficiales (INDECI, Defensa Civil, SENAMHI)
+* Integración con datos oficiales **(INDECI, Defensa Civil, SENAMHI)**
 
 ### 8. Interfaz accesible y simple
 * Diseñada para todo tipo de usuarios:
@@ -94,8 +94,8 @@ Los usuarios pueden enviar reportes inmediatos sobre inundaciones, huaicos o ani
 * Posibilidad de registro con DNI para autenticación
 
 ## Autores
-* Diaz Yurivilca, Sofía - U20241a195
-* Ruíz Peres, Carlos Antonio - U202414138
-* Mendoza Blanco, Ariel Roberto - U202419667
-* Escalante Rojas, Rogger Junior - U20241b172
-* Geldres Cortez, Carlos Antonio - U202413117
+* Diaz Yurivilca, Sofía - **U20241a195**
+* Ruíz Peres, Carlos Antonio - **U202414138**
+* Mendoza Blanco, Ariel Roberto - **U202419667**
+* Escalante Rojas, Rogger Junior - **U20241b172**
+* Geldres Cortez, Carlos Antonio - **U202413117**
